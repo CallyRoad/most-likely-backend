@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "npx tsx src/index.ts",
     "serve": "concurrently \"tsc --watch\" \"nodemon dist/index.js\"",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -24,8 +24,9 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.26.0",
     "@types/express": "^5.0.0",
-    "@types/jest": "^29.5.12",
+    "@types/jest": "^29.5.14",
     "@types/mongodb": "^4.0.7",
     "@types/mongoose": "^5.11.97",
     "@types/node": "^20.17.6",
@@ -33,11 +34,10 @@
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.56.0",
+    "ts-jest": "^29.2.5",
     "jest": "^29.7.0",
     "nodemon": "^3.1.7",
-    "ts-jest": "^29.1.2",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.6.3"
-  },
-  "type": "module"
+  }
 }

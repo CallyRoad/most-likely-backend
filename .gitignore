@@ -2,6 +2,9 @@
 build/
 dist/
 
+# Coverage directory
+coverage/
+
 # Misc
 .DS_Store
 Thumbs.db
@@ -21,6 +24,10 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Compiled JavaScript files
+*.js
+*.js.map
 
 # IDEs and editors
 .idea/

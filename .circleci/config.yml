@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  most-likely-job:
+    docker:
+      - image: cimg/node:23.1.0
+    steps:
+      - checkout
+      - run : npm install
+      - run : npm test
+
+workflows:
+  most-likely:
+    jobs:
+      - most-likely-job
+
+

@@ -5,7 +5,10 @@ export class Player {
 
     constructor(
         private readonly id: string,
-        private nickname: string
+        private nickname: string,
+        private readonly isRegistered: boolean,
+        private email?: string,
+        private password?: string
     ) {
         this.validateNickname(nickname);
     }
@@ -31,6 +34,24 @@ export class Player {
     getNickname(): string {
         return this.nickname;
     };
+
+    getEmail(): string | undefined {
+        return this.email;
+    };
+
+    isPlayerRegistered(): boolean {
+        return this.isRegistered;
+    };
+
+    getRegisteredPlayerData(): {email: string} | null {
+        if (!this.isRegistered || !this.email) {
+            return null;
+        }
+
+        return {
+            email: this.email
+        };
+    }
 
     incrementScore(): number {
         return this.score += 1;

@@ -1,13 +1,13 @@
 import {GameEmitter} from "@/core/domain/ports/game/game-emitter";
 import {Player} from "@/core/domain/entities/player";
-import {JoinAsGuestPlayer} from "@/core/domain/usecases/player/join-as-guest-player";
+import {JoinAsGuestPlayerUseCase} from "@/core/domain/usecases/player/join-as-guest-player";
 import {getRandomId} from "@/core/domain/helpers/generateId";
 import {SettingsId} from "@/core/domain/settings";
 
 describe("JoinAsGuestPlayer", () => {
 
     let gameEmitterMock: jest.Mocked<GameEmitter>;
-    let joinAsGuestPlayer: JoinAsGuestPlayer;
+    let joinAsGuestPlayer: JoinAsGuestPlayerUseCase;
 
     // Initialize  GameEmitter mock with Jest mock functions
     gameEmitterMock = {
@@ -22,7 +22,7 @@ describe("JoinAsGuestPlayer", () => {
         jest.clearAllMocks();
 
         // Create a new instance of JoinAsGuestPlayer with the mock
-        joinAsGuestPlayer = new JoinAsGuestPlayer(gameEmitterMock);
+        joinAsGuestPlayer = new JoinAsGuestPlayerUseCase(gameEmitterMock);
     });
 
     it("should emit player joined event", () => {

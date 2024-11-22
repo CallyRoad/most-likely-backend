@@ -48,3 +48,29 @@ export class WeakPasswordError extends Error {
         super("Password must contain at least 8 characters, including uppercase, lowercase, number and special character (@$!%*?&)");
     }
 }
+
+// Game errors
+
+export class GameAlreadyExists extends Error {
+    constructor() {
+        super("Game already exists");
+    }
+}
+
+export class NotEnoughPlayerError extends Error {
+    constructor() {
+        super("Not enough players to start the game");
+    }
+}
+
+export class GameFullError extends Error {
+    constructor() {
+        super("Number of players allowed is full");
+    }
+}
+
+export class GameAlreadyStartedError extends Error {
+    constructor() {
+        super("Game already started");
+    }
+}

@@ -4,7 +4,7 @@ export class Player {
     private score: number = 0;
 
     constructor(
-        private readonly id: string,
+        readonly id: string,
         private nickname: string,
         private readonly isRegistered: boolean,
         private email?: string,

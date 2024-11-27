@@ -48,3 +48,61 @@ export class WeakPasswordError extends Error {
         super("Password must contain at least 8 characters, including uppercase, lowercase, number and special character (@$!%*?&)");
     }
 }
+
+// Player errors
+
+export class PlayerNotFoundError extends Error {
+    constructor() {
+        super("Player not found");
+    }
+}
+
+export class PlayerAlreadyInGameError extends Error {
+    constructor() {
+        super("Player already in game");
+    }
+}
+
+export class PlayerAlreadyInOtherGameError extends Error {
+    constructor() {
+        super("Player already in other in a game");
+    }
+}
+
+// Game errors
+
+export class GameAlreadyExistsError extends Error {
+    constructor() {
+        super("Game already exists");
+    }
+}
+
+export class GameHasNoHostError extends Error {
+    constructor() {
+        super("Game has no host");
+    }
+}
+
+export class GameNotFoundError extends Error {
+    constructor() {
+        super("Game not found");
+    }
+}
+
+export class NotEnoughPlayerError extends Error {
+    constructor() {
+        super("Not enough players to start the game");
+    }
+}
+
+export class GameFullError extends Error {
+    constructor() {
+        super("Number of players allowed is full");
+    }
+}
+
+export class GameAlreadyStartedError extends Error {
+    constructor() {
+        super("Game already started");
+    }
+}

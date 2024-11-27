@@ -1,6 +1,7 @@
 export enum SettingsId {
     USER_ID = 5,
-    GAME_ID = 8
+    GAME_ID = 8,
+    QUESTION_ID = 5
 }
 
 export enum SettingsGame {

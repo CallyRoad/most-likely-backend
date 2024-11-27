@@ -106,3 +106,23 @@ export class GameAlreadyStartedError extends Error {
         super("Game already started");
     }
 }
+
+// Questions Errors
+
+export class EmptyQuestionError extends Error {
+    constructor() {
+        super("Empty question text");
+    }
+}
+
+export class LongQuestionError extends Error {
+    constructor() {
+        super("Question text must not exceed 200 characters");
+    }
+}
+
+export class ShortQuestionError extends Error {
+    constructor() {
+        super("Question text must be at least 3 characters");
+    }
+}

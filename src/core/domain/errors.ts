@@ -49,11 +49,43 @@ export class WeakPasswordError extends Error {
     }
 }
 
+// Player errors
+
+export class PlayerNotFoundError extends Error {
+    constructor() {
+        super("Player not found");
+    }
+}
+
+export class PlayerAlreadyInGameError extends Error {
+    constructor() {
+        super("Player already in game");
+    }
+}
+
+export class PlayerAlreadyInOtherGameError extends Error {
+    constructor() {
+        super("Player already in other in a game");
+    }
+}
+
 // Game errors
 
-export class GameAlreadyExists extends Error {
+export class GameAlreadyExistsError extends Error {
     constructor() {
         super("Game already exists");
+    }
+}
+
+export class GameHasNoHostError extends Error {
+    constructor() {
+        super("Game has no host");
+    }
+}
+
+export class GameNotFoundError extends Error {
+    constructor() {
+        super("Game not found");
     }
 }
 

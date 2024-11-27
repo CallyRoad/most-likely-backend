@@ -13,7 +13,6 @@ export class Game {
             this.addPlayer(hostPlayer);
     };
 
-
     getId(): string {
         return this.id;
     };
@@ -56,5 +55,4 @@ export class Game {
         }
         this.state = GameState.IN_PROGRESS;
     };
-
 }

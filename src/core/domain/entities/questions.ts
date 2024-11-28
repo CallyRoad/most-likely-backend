@@ -14,7 +14,7 @@ export class Question {
         if (!text || text.trim().length === 0) {
             throw new EmptyQuestionError();
         }
-        if (text.length < 3) {
+        if (text.length < 15) {
             throw new ShortQuestionError();
         }
         if (text.length > 200) {

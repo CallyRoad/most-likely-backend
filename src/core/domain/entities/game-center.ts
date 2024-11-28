@@ -2,6 +2,7 @@ import {Player} from "@/core/domain/entities/player";
 import {Game} from "@/core/domain/entities/game";
 import {getRandomId} from "@/core/domain/helpers/generateId";
 import {SettingsId} from "@/core/domain/settings";
+import {Question} from "@/core/domain/entities/questions";
 
 export class GameCenter {
     private static instance: GameCenter;
@@ -25,9 +26,10 @@ export class GameCenter {
         GameCenter.instance = new GameCenter();
     };
 
-    createNewGame(hostPlayer: Player): Game {
+    createNewGame(hostPlayer: Player, questions: Question[]): Game {
         const gameId = getRandomId(SettingsId.GAME_ID);
         const game = new Game(gameId, hostPlayer);
+        game.setQuestions(questions);
         this.gameMap[gameId] = game;
         return game;
     };

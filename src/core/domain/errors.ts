@@ -95,6 +95,12 @@ export class NotEnoughPlayerError extends Error {
     }
 }
 
+export class NotEnoughQuestionsError extends Error {
+    constructor() {
+        super("Not enough questions to start the game");
+    }
+}
+
 export class GameFullError extends Error {
     constructor() {
         super("Number of players allowed is full");
@@ -104,5 +110,25 @@ export class GameFullError extends Error {
 export class GameAlreadyStartedError extends Error {
     constructor() {
         super("Game already started");
+    }
+}
+
+// Questions Errors
+
+export class EmptyQuestionError extends Error {
+    constructor() {
+        super("Empty question text");
+    }
+}
+
+export class LongQuestionError extends Error {
+    constructor() {
+        super("Question text must not exceed 200 characters");
+    }
+}
+
+export class ShortQuestionError extends Error {
+    constructor() {
+        super("Question text must be at least 15 characters");
     }
 }
